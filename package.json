@@ -4,10 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "tailwind:process": "npx postcss src/assets/main.css --o ./src/_includes/assets/main.css --watch",
-    "start": "concurrently \"npm run tailwind:process\" \"npm run serve\"",
+    "tailwind:watch": "npx postcss src/assets/main.css --o ./src/_includes/assets/main.css --watch",
+    "tailwind:build": "npx postcss src/assets/main.css --o ./src/_includes/assets/main.css",
+    "start": "concurrently \"npm run tailwind:watch\" \"npm run serve\"",
     "serve": "npx eleventy --serve",
-    "build": "npm tailwind:process && npx eleventy"
+    "build": "rm -R _site && npm run tailwind:build && npx eleventy"    
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
