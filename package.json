@@ -6,7 +6,8 @@
   "scripts": {
     "tailwind:process": "npx postcss src/assets/main.css --o ./src/_includes/assets/main.css --watch",
     "start": "concurrently \"npm run tailwind:process\" \"npm run serve\"",
-    "serve": "npx eleventy --serve"
+    "serve": "npx eleventy --serve",
+    "build": "npm tailwind:process && npx eleventy"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
