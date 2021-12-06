@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+templateClass: home
+eleventyNavigation:
+  key: Home
+  order: 1
+---
+<header class="flex items-center justify-center flex-col py-8 md:py-16 md:justify-between md:flex-row">
+  <picture class="md:order-1">
+    <a href="/about"><img src="/static/me.png" srcset="/static/me@2x.png 2x" alt="Rob Hough" loading="lazy" /></a>
+  </picture>
+  <aside class="grid items-center text-center pt-8 md:pt-0 md:text-left md:block">
+    <h2 class="text-gray-900 dark:text-white">Rob Hough</h2>
+    <h3>Product Designer <a href="https://nuom.co.uk">@nuom</a></h3>
+  </aside>
+</header>
+  
+{% include 'feed.njk' %}

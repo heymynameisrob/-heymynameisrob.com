@@ -1,0 +1,25 @@
+{
+  "name": "heymynameisrob-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "tailwind:process": "npx postcss src/assets/main.css --o ./src/_includes/assets/main.css --watch",
+    "start": "concurrently \"npm run tailwind:process\" \"npm run serve\"",
+    "serve": "npx eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "autoprefixer": "^10.4.0",
+    "concurrently": "^6.3.0",
+    "postcss-cli": "^9.0.2",
+    "tailwindcss": "^2.2.19"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.4.1",
+    "eleventy-plugin-excerpt": "^1.1.2",
+    "fs": "^0.0.1-security",
+    "luxon": "^2.1.0",
+    "markdown-it": "^12.2.0"
+  }
+}

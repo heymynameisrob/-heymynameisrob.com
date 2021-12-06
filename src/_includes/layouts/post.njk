@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+contained: true
+templateClass: post
+---
+<header role="banner" class="flex items-center flex-col py-16 md:py-24 space-y-4">  
+  <a href="/" class="underline dark:text-orange-600">Go Back</a>
+  <h1 class="text-2xl md:text-4xl text-gray-900 dark:text-white">{{ title }}</h1>
+  <small class="block text-xs md:text-sm text-gray-600 font-mono">Last updated {{ date | readableDate }}</small>  
+</header>
+<section class="prose text-gray-700 dark:text-white dark:text-opacity-70 mx-auto content">
+  {{ content | safe }}
+</section>
